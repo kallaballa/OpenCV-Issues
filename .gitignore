@@ -1,0 +1,8 @@
+.cproject
+.project
+.settings/
+src/*/*.o
+src/*/*.dep
+src/*/*.d
+src/v4l2-vaapi/v4l2-vaapi
+
