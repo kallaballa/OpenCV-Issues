@@ -1,6 +1,5 @@
-#define CL_TARGET_OPENCL_VERSION 200
+#define CL_TARGET_OPENCL_VERSION 120
 
-//WIDTH and HEIGHT have to be specified before including subsystems.hpp
 constexpr long unsigned int WIDTH = 1920;
 constexpr long unsigned int HEIGHT = 1080;
 constexpr const int VA_HW_DEVICE_INDEX = 0;
