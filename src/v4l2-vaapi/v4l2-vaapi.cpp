@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
     using namespace kb;
 
     if(argc != 2) {
-        cerr << "Usage: video-demo <video-file>" << endl;
+        cerr << "Usage: v4l2-vaapi <video-file/device-file>" << endl;
         exit(1);
     }
     //Initialize OpenCL Context for VAAPI
