@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
     //Initialize OpenCL Context for VAAPI
     va::init();
 
-    //Initialize MJPEG HW decoding using VAAPI
+    //Initialize HW decoding using VAAPI
     cv::VideoCapture capture(argv[1], cv::CAP_FFMPEG, {
             cv::CAP_PROP_HW_DEVICE, VA_HW_DEVICE_INDEX,
             cv::CAP_PROP_HW_ACCELERATION, cv::VIDEO_ACCELERATION_VAAPI,
