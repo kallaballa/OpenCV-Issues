@@ -4,5 +4,8 @@
 src/*/*.o
 src/*/*.dep
 src/*/*.d
+example.mkv
 src/v4l2-vaapi/v4l2-vaapi
-
+src/hls-hsv-opencl/hls-hsv-opencl
+src/slow-hog-opencl/slow-hog-opencl
+src/vaapi-decode-encode/vaapi-decode-encode
