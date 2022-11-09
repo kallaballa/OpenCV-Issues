@@ -35,12 +35,15 @@ export CXXFLAGS
 export LIBS
 
 dirs:
+	${MAKE} -C src/hls-hsv-opencl/ ${MAKEFLAGS} CXX=${CXX} ${MAKECMDGOALS}
 	${MAKE} -C src/v4l2-vaapi/ ${MAKEFLAGS} CXX=${CXX} ${MAKECMDGOALS}
 	
 debian-release:
+	${MAKE} -C src/hls-hsv-opencl/ ${MAKEFLAGS} CXX=${CXX} release 
 	${MAKE} -C src/v4l2-vaapi/ ${MAKEFLAGS} CXX=${CXX} release
 
 debian-clean:
+	${MAKE} -C src/hls-hsv-opencl/ ${MAKEFLAGS} CXX=${CXX} clean 
 	${MAKE} -C src/v4l2-vaapi/ ${MAKEFLAGS} CXX=${CXX} clean
 	
 install: ${TARGET}
