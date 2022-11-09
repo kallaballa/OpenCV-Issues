@@ -1,7 +1,5 @@
 #define CL_TARGET_OPENCL_VERSION 120
 
-constexpr long unsigned int WIDTH = 1920;
-constexpr long unsigned int HEIGHT = 1080;
 constexpr const int VA_HW_DEVICE_INDEX = 0;
 
 #include "../common/subsystems.hpp"
@@ -10,7 +8,6 @@ constexpr const int VA_HW_DEVICE_INDEX = 0;
 using std::cerr;
 using std::endl;
 using std::string;
-
 
 int main(int argc, char **argv) {
     using namespace kb;
