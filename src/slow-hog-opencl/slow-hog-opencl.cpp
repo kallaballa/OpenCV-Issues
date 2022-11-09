@@ -13,8 +13,6 @@ int main(int argc, char **argv) {
         cerr << "Usage: hls-hsv-opencl" << endl;
         exit(1);
     }
-    cv::ocl::setUseOpenCL(true);
-
     cv::UMat gray(360, 640, CV_8UC1, cv::Scalar(128));
     std::vector<cv::Rect> locations;
     cv::HOGDescriptor hog;

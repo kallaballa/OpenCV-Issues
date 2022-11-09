@@ -13,8 +13,6 @@ int main(int argc, char **argv) {
         cerr << "Usage: hls-hsv-opencl" << endl;
         exit(1);
     }
-    cv::ocl::setUseOpenCL(true);
-
     cv::UMat red(1080,1920,CV_8UC3, cv::Scalar(0,0,255));
     cv::UMat hls;
     cv::UMat hsv;
