@@ -1,18 +1,12 @@
 #define CL_TARGET_OPENCL_VERSION 120
 
-constexpr long unsigned int WIDTH = 1920;
-constexpr long unsigned int HEIGHT = 1080;
-constexpr const int VA_HW_DEVICE_INDEX = 0;
-
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/core/ocl.hpp>
 
-
 using std::cerr;
 using std::endl;
-
 
 int main(int argc, char **argv) {
     if(argc != 1) {
