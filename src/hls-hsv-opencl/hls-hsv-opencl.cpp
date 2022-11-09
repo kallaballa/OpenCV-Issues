@@ -21,6 +21,8 @@ int main(int argc, char **argv) {
 
     cv::cvtColor(red, hls, cv::COLOR_BGR2HLS);
     cv::cvtColor(hls, red, cv::COLOR_HLS2BGR);
+    cv::cvtColor(red, hsv, cv::COLOR_BGR2HSV);
+    cv::cvtColor(hsv, red, cv::COLOR_HSV2BGR);
 
     cv::imshow("result", red);
     cv::waitKey(0);
