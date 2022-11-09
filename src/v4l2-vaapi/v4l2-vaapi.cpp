@@ -45,8 +45,6 @@ int main(int argc, char **argv) {
 
     cv::UMat videoFrame;
     while (true) {
-        //Bind the OpenCL context for VAAPI
-        va::bind();
         //Decode a frame on the GPU using VAAPI
         capture >> videoFrame;
         if (videoFrame.empty()) {
