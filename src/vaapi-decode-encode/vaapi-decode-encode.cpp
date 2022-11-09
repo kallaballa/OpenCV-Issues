@@ -55,7 +55,7 @@ int main(int argc, char **argv) {
         //Decode a frame on the GPU using VAAPI
         capture >> videoFrame;
         if (videoFrame.empty()) {
-            cerr << "End of stream. Exiting" << endl;
+            cerr << endl << "End of stream. Exiting" << endl;
             break;
         }
 
