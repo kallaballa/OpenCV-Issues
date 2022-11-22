@@ -3,7 +3,8 @@
 constexpr const int VA_HW_DEVICE_INDEX = 0;
 constexpr const char* OUTPUT_FILENAME = "vaapi-decode-encode.mkv";
 
-#include "../common/subsystems.hpp"
+#include <opencv2/opencv.hpp>
+#include <opencv2/videoio.hpp>
 #include <string>
 
 using std::cerr;
@@ -11,14 +12,10 @@ using std::endl;
 using std::string;
 
 int main(int argc, char **argv) {
-    using namespace kb;
-
     if(argc != 2) {
         cerr << "Usage: vaapi-decode-encode <video-file/device-file>" << endl;
         exit(1);
     }
-    //Initialize OpenCL Context for VAAPI
-    va::init();
 
     //Initialize HW decoding using VAAPI
     cv::VideoCapture capture(argv[1], cv::CAP_FFMPEG, {
@@ -43,7 +40,6 @@ int main(int argc, char **argv) {
     });
 
     cerr << "FPS from stream: " << fps << endl;
-    cerr << "VA Version: " << va::get_info() << endl;
 
     uint64_t cnt = 1;
     int64 start = cv::getTickCount();
