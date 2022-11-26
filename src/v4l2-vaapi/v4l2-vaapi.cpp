@@ -32,25 +32,23 @@ int main(int argc, char **argv) {
     cerr << "FPS from stream: " << fps << endl;
 
     uint64_t cnt = 1;
-    int64 start = cv::getTickCount();
-    double tickFreq = cv::getTickFrequency();
     double lastFps = fps;
+    cv::TickMeter tick;
 
     cv::UMat videoFrame;
     while (true) {
+        tick.start();
         //Decode a frame on the GPU using VAAPI
         capture >> videoFrame;
         if (videoFrame.empty()) {
             cerr << endl << "End of stream. Exiting" << endl;
             break;
         }
-
-        //Measure FPS
+        tick.stop();
+        //Print FPS
         if (cnt % uint64(ceil(lastFps)) == 0) {
-            int64 tick = cv::getTickCount();
-            lastFps = tickFreq / ((tick - start + 1) / cnt);
+            lastFps = tick.getFPS();
             cerr << "FPS : " << lastFps << '\r';
-            start = tick;
             cnt = 1;
         }
 
