@@ -6,7 +6,6 @@ constexpr const char* OUTPUT_FILENAME = "vaapi-decode-encode.mkv";
 #include <opencv2/opencv.hpp>
 #include <opencv2/videoio.hpp>
 #include <string>
-#include "../common/subsystems.hpp"
 
 using std::cerr;
 using std::endl;
