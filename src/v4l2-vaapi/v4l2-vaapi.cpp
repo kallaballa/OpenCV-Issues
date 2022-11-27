@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
     });
     // check if we succeeded
     if (!capture.isOpened()) {
-        cerr << "ERROR! Unable to open camera" << endl;
+        cerr << "ERROR! Unable to open video-input" << endl;
         return -1;
     }
 
