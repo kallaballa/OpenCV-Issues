@@ -9,3 +9,4 @@ src/v4l2-vaapi/v4l2-vaapi
 src/hls-hsv-opencl/hls-hsv-opencl
 src/slow-hog-opencl/slow-hog-opencl
 src/vaapi-decode-encode/vaapi-decode-encode
+src/oclCvtColorBGR2HSV-race/perf-test
